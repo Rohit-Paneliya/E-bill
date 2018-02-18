@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Ebill</string>
+
+    <string-array name="transportation">
+        <item>Outward Supply</item>
+        <item>Outward Export</item>
+        <item>Outward Job Work</item>
+        <item>Outward SKD/CKD</item>
+        <item>Outward Recipient Not Known</item>
+        <item>Outward For Own Use</item>
+        <item>Outward Exhibitions &amp; Fairs</item>
+        <item>Outward Line Sales</item>
+        <item>Outward Others</item>
+        <item>Inward Supply</item>
+        <item>Inward Import</item>
+        <item>Inward SKD/CKD</item>
+        <item>Inward Job Work Returns</item>
+        <item>Inward Sales Returns</item>
+        <item>Inward Exhibitions &amp; Fairs</item>
+        <item>Inward Others</item>
+    </string-array>
+
+    <string-array name="transportationCode">
+        <item>OSUP</item>
+        <item>OEXP</item>
+        <item>OJOB</item>
+        <item>OSCD</item>
+        <item>ORNK</item>
+        <item>OFOU</item>
+        <item>OEOF</item>
+        <item>OLNS</item>
+        <item>OOTH</item>
+        <item>ISUP</item>
+        <item>IIMP</item>
+        <item>ISCD</item>
+        <item>IJWR</item>
+        <item>ISLR</item>
+        <item>IEOF</item>
+        <item>IOTH</item>
+    </string-array>
+
+</resources>
