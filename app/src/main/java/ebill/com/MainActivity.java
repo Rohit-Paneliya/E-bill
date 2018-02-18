@@ -8,7 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     private final int MY_PERMISSIONS_REQUEST_SEND_SMS = 101;
     String destinationAddress = "9731979899";
+    Calendar billDate = Calendar.getInstance();
+    String[] transCode;
     private Spinner spinnerTransType;
     private EditText txtRecGstIn;
     private EditText txtPincode;
@@ -33,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtHsnCode;
     private EditText txtDistance;
     private EditText txtVehicalNo;
-    Calendar billDate = Calendar.getInstance();
-
-    String[] transCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,15 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
                         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
                         billDate.set(year, month, dayOfMonth);
-
                         txtBillDate.setText(dateFormat.format(billDate.getTime()));
-                        /*if (dayOfMonth > 9) {
-                            txtBillDate.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
-                        } else {
-                            txtBillDate.setText("0" + dayOfMonth + "/" + (month + 1) + "/" + year);
-                        }*/
                     }
                 }, billDate.get(Calendar.YEAR), billDate.get(Calendar.MONTH), billDate.get(Calendar.DAY_OF_MONTH));
 
@@ -161,15 +155,14 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        Log.d("-------", "sendSms: " + setMsgFormat());
-        /*SmsManager smsManager = SmsManager.getDefault();
+        //Log.d("-------", "sendSms: " + setMsgFormat());
+        SmsManager smsManager = SmsManager.getDefault();
         smsManager.sendTextMessage(destinationAddress, null, setMsgFormat(), null, null);
-        Toast.makeText(getApplicationContext(), "SMS sent successfully.", Toast.LENGTH_LONG).show();*/
+        Toast.makeText(getApplicationContext(), "SMS sent successfully.", Toast.LENGTH_LONG).show();
     }
 
     @NonNull
     private String setMsgFormat() {
-        //String billValue = String.format("%.2f", Double.parseDouble(txtBillValue.getText().toString()));
         String billValue = txtBillValue.getText().toString();
 
         return "EWBG " + transCode[spinnerTransType.getSelectedItemPosition()] + " " + txtRecGstIn.getText().toString() + " " + txtPincode.getText().toString() + " " +
