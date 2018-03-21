@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class GenerateBillActivity extends AppCompatActivity {
 
     private final int MY_PERMISSIONS_REQUEST_SEND_SMS = 101;
     String destinationAddress = "9731979899";
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         txtBillDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(GenerateBillActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
