@@ -19,7 +19,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Transportation type"
+                android:text="@string/transportation_type"
                 android:textSize="18sp" />
 
             <Spinner
@@ -36,14 +36,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:hint="Recipient’s GSTIN"
+            android:hint="@string/recipient_s_gstin"
             android:maxLength="15" />
 
         <EditText
             android:id="@+id/txtPincode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Pincode"
+            android:hint="@string/pincode"
             android:inputType="number"
             android:maxLength="6" />
 
@@ -52,8 +52,7 @@
             android:id="@+id/txtBillNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Bill No"
-            android:inputType="phone"
+            android:hint="@string/bill_no"
             android:maxLength="15" />
 
         <LinearLayout
@@ -67,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4.6"
                 android:paddingLeft="5dp"
-                android:text="Bill Date"
+                android:text="@string/bill_date"
                 android:textSize="18sp" />
 
             <TextView
@@ -77,7 +76,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="5"
-                android:text="Select date"
+                android:text="@string/select_date"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -86,7 +85,7 @@
             android:id="@+id/txtBillValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Bill Value"
+            android:hint="@string/bill_value"
             android:inputType="numberDecimal"
             android:maxLength="15" />
 
@@ -94,7 +93,7 @@
             android:id="@+id/txtHsnCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="HSN code"
+            android:hint="@string/hsn_code"
             android:inputType="number"
             android:maxLength="10" />
 
@@ -102,21 +101,21 @@
             android:id="@+id/txtDistance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Approx distance (in km)"
+            android:hint="@string/approx_distance_in_km"
             android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/txtVehicalNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Vehical no" />
+            android:hint="@string/vehical_no" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:onClick="onSubmitClicked"
-            android:text="Submit" />
+            android:text="@string/submit" />
 
     </LinearLayout>
 

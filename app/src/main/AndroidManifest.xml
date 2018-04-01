@@ -12,14 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".GenerateBillActivity" />
-        <activity android:name=".DashboardActivity">
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".CancelBillActivity" />
+        <activity android:name=".SelectLanguageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CancelBillActivity"></activity>
+        <activity android:name=".BillSuggestionActivity"></activity>
     </application>
 
 </manifest>

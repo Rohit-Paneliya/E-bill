@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:gravity="center"
-        android:text="GST\nE-bill"
+        android:text="@string/gst_ne_bill"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="50sp" />
 
@@ -26,7 +26,7 @@
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onGenerateClicked"
         android:padding="8dp"
-        android:text="Generate E-bill"
+        android:text="@string/generate_e_bill"
         android:textAllCaps="false"
         android:textColor="#ffffff" />
 
@@ -42,7 +42,7 @@
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onCancelBillClicked"
         android:padding="8dp"
-        android:text="Cancel E-bill"
+        android:text="@string/cancel_e_bill"
         android:textAllCaps="false"
         android:textColor="#ffffff" />
 
