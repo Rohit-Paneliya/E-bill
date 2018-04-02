@@ -37,7 +37,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:hint="@string/recipient_s_gstin"
-            android:maxLength="15" />
+            android:maxLength="15"
+            android:maxLines="1" />
 
         <EditText
             android:id="@+id/txtPincode"
@@ -45,15 +46,16 @@
             android:layout_height="wrap_content"
             android:hint="@string/pincode"
             android:inputType="number"
-            android:maxLength="6" />
+            android:maxLength="6"
+            android:maxLines="1" />
 
         <EditText
-
             android:id="@+id/txtBillNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/bill_no"
-            android:maxLength="15" />
+            android:maxLength="15"
+            android:maxLines="1" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,7 +89,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/bill_value"
             android:inputType="numberDecimal"
-            android:maxLength="15" />
+            android:maxLength="15"
+            android:maxLines="1" />
 
         <EditText
             android:id="@+id/txtHsnCode"
@@ -95,27 +98,33 @@
             android:layout_height="wrap_content"
             android:hint="@string/hsn_code"
             android:inputType="number"
-            android:maxLength="10" />
+            android:maxLength="10"
+            android:maxLines="1" />
 
         <EditText
             android:id="@+id/txtDistance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/approx_distance_in_km"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:maxLines="1" />
 
         <EditText
             android:id="@+id/txtVehicalNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/vehical_no" />
+            android:hint="@string/vehical_no"
+            android:maxLines="1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/colorPrimary"
+            android:foreground="?attr/selectableItemBackground"
             android:onClick="onSubmitClicked"
-            android:text="@string/submit" />
+            android:text="@string/submit"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 

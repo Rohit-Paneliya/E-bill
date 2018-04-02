@@ -15,6 +15,7 @@ public class SelectLanguageActivity extends AppCompatActivity {
     private RadioGroup radioGroup;
     private RadioButton radioGuj;
     private RadioButton radioEng;
+    private RadioButton radioHin;
 
 
     @Override
@@ -25,6 +26,7 @@ public class SelectLanguageActivity extends AppCompatActivity {
         radioGroup = findViewById(R.id.radioGroup);
         radioGuj = findViewById(R.id.radioGuj);
         radioEng = findViewById(R.id.radioEng);
+        radioHin = findViewById(R.id.radioHin);
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -45,6 +47,15 @@ public class SelectLanguageActivity extends AppCompatActivity {
                         DisplayMetrics dm = res.getDisplayMetrics();
                         android.content.res.Configuration conf = res.getConfiguration();
                         conf.setLocale(new Locale("en")); // API 17+ only.
+                        res.updateConfiguration(conf, dm);
+                    }
+                    break;
+
+                    case R.id.radioHin: {
+                        Resources res = getResources();
+                        DisplayMetrics dm = res.getDisplayMetrics();
+                        android.content.res.Configuration conf = res.getConfiguration();
+                        conf.setLocale(new Locale("hin")); // API 17+ only.
                         res.updateConfiguration(conf, dm);
                     }
                     break;

@@ -3,25 +3,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="16dp"
     tools:context="ebill.com.BillSuggestionActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bill_suggestion" />
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/bill_suggestion"
+        android:textColor="#595959" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:background="@color/colorPrimary"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onOkClicked"
-        android:text="@string/ok"
+        android:text="@string/share"
+        android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnGenerate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:background="#459c40"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="onGenerateClicked"
+            android:padding="8dp"
+            android:text="@string/generate_e_bill"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/heading"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:background="#b13636"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="onCancelBillClicked"
+            android:padding="8dp"
+            android:text="@string/cancel_e_bill"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+    </LinearLayout>
 
 </LinearLayout>

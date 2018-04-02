@@ -3,26 +3,31 @@
     <string name="select_language">Select Language</string>
     <string name="gujarati">Gujarati</string>
     <string name="english">English</string>
+    <string name="generate_e_bill">ઇ વે બિલ બનાવો</string>
+    <string name="cancel_e_bill">ઇ વે બિલ રદ કરો</string>
+
+    <string name="transportation_type">વ્યવહાર પ્રકાર</string>
+    <string name="recipient_s_gstin">ગ્રાહક GST નંબર</string>
+    <string name="pincode">ડિલિવરીના સ્થળની પિન કોડ</string>
+    <string name="bill_no">બિલ નંબર</string>
+    <string name="bill_date">બિલ તારીખ</string>
+    <string name="bill_value">બિલ રકમ</string>
+    <string name="hsn_code">HSN code</string>
+    <string name="approx_distance_in_km">KM માં ​​અંતર</string>
+    <string name="vehical_no">ટ્રાન્સપોર્ટ વ્હિકલ નંબર</string>
+    <string name="submit">સબમિટ કરો</string>
+    <string name="bill_suggestion">SMS સુવિધાની મદદથી ઇ વે બિલ બનાવવા માટે તમારી પાસે નીચે વિગતો હોવી જોઈએ:\n\n1) બિલ કૉપિ કરો\n2) પરિવહન વાહન નંબર\n3) ઇ વે બિલ પોર્ટલમાં તમારા મોબાઇલ નંબરની નોંધણી (એક સમયની પ્રવૃત્તિ) \n\n\n જો તમારું મોબાઈલ નંબર નોંધાયેલું ન હોય તો, કૃપા કરીને તમારા જીએસટી કન્સલ્ટન્ટને તમારા મોબાઇલ નંબરની નોંધણી કરાવવા માટે જણાવો. (તમે મોબાઇલ નંબર રજીસ્ટર કરી શકો છો જેમાં મફત આઉટગોઇંગ SMS છે). તમે નોંધણી માટે જીએસટી કન્સલ્ટન્ટ પર દસ્તાવેજ નીચે શેર કરી શકો છો.</string>
+
     <string name="cancel_bill_screen">Cancel Bill Screen</string>
     <string name="gst_ne_bill">GST E-bill</string>
-    <string name="generate_e_bill">Generate E-bill</string>
-    <string name="cancel_e_bill">Cancel E-bill</string>
-    <string name="transportation_type">Transportation type</string>
-    <string name="recipient_s_gstin">Recipient’s GSTIN</string>
-    <string name="pincode">Pincode</string>
-    <string name="bill_no">Bill No</string>
-    <string name="bill_date">Bill Date</string>
     <string name="select_date">Select date</string>
-    <string name="bill_value">Bill Value</string>
-    <string name="hsn_code">HSN code</string>
-    <string name="approx_distance_in_km">Approx distance (in km)</string>
-    <string name="vehical_no">Vehical no</string>
-    <string name="submit">Submit</string>
-    <string name="bill_suggestion">SMS નો ઉપયોગ કરીને ઇ-વે બિલ બનાવવા માટે તમારો મોબાઇલ નંબર ઇ-વે બિલ પોર્ટલ પર રજીસ્ટર થવો આવશ્યક છે.\n\nજો તમારું મોબાઈલ નંબર નોંધાયેલું ન હોય તો, કૃપા કરીને તમારા જીએસટી કન્સલ્ટન્ટને તમારા મોબાઇલ નંબરની નોંધણી કરાવવા માટે જણાવો. (તમે મોબાઇલ નંબર રજીસ્ટર કરી શકો છો જેમાં મફત આઉટગોઇંગ SMS છે). તમે નોંધણી માટે જીએસટી કન્સલ્ટન્ટ પર દસ્તાવેજ નીચે શેર કરી શકો છો..</string>
     <string name="ok">OK</string>
+    <string name="hindi">Hindi</string>
+    <string name="share">Share</string>
+    <string name="e_way_bill_no">ઇ વે બિલ નંબર</string>
 
     <string-array name="transportation">
-        <item>Outward Supply</item>
+        <item>Outward Supply (વેચાણ)</item>
         <item>Outward Export</item>
         <item>Outward Job Work</item>
         <item>Outward SKD/CKD</item>

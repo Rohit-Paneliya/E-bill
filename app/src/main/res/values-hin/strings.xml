@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Ebill</string>
+    <string name="select_language">Select Language</string>
+    <string name="gujarati">Gujarati</string>
+    <string name="english">English</string>
+    <string name="cancel_bill_screen">Cancel Bill Screen</string>
+    <string name="gst_ne_bill">GST E-bill</string>
+    <string name="generate_e_bill">ई वे बिल जेनरेट करें</string>
+    <string name="cancel_e_bill">ई वे बिल रद्द करें</string>
+
+    <string name="transportation_type">વसौदे का प्रकार</string>
+    <string name="recipient_s_gstin">खरीदार GST संख्या</string>
+    <string name="pincode">डिलिवरी के स्थान का पिन कोड</string>
+    <string name="bill_no">बील संख्या</string>
+    <string name="bill_date">बिल की तिथि</string>
+    <string name="bill_value">बिल की राशि</string>
+    <string name="hsn_code">HSN code</string>
+    <string name="approx_distance_in_km">लगभग दूरी KM</string>
+    <string name="vehical_no">परिवहन वाहन नंबर</string>
+    <string name="submit">सबमिट करें</string>
+
+    <string name="select_date">Select date</string>
+    <string name="bill_suggestion">आपके पास SMS सुविधा का उपयोग करके ई वे बिल तैयार करने के लिए नीचे विवरण होना चाहिए:\n\n1) बिल कॉपी\n2) परिवहन वाहन संख्या\n3) ई-वे बिल पोर्टल में अपने मोबाइल नंबर का पंजीकरण (एक बार गतिविधि) \n\n\n यदि आपका मोबाइल नंबर पंजीकृत नहीं है, तो अपने जीएसटी सलाहकार को ई-बिल बिल पोर्टल पर अपना मोबाइल नंबर रजिस्टर करने के लिए सूचित करें (आप मोबाइल नंबर रजिस्टर कर सकते हैं जिसमें निःशुल्क आउटगोइंग एसएमएस है)। आप पंजीकरण के लिए जीएसटी सलाहकार को दस्तावेज़ के नीचे साझा कर सकते हैं।.</string>
+    <string name="ok">OK</string>
+    <string name="hindi">Hindi</string>
+    <string name="share">Share</string>
+    <string name="e_way_bill_no">ई वे बिल संख्या</string>
+
+    <string-array name="transportation">
+        <item>Outward Supply (बेचना)</item>
+        <item>Outward Export</item>
+        <item>Outward Job Work</item>
+        <item>Outward SKD/CKD</item>
+        <item>Outward Recipient Not Known</item>
+        <item>Outward For Own Use</item>
+        <item>Outward Exhibitions &amp; Fairs</item>
+        <item>Outward Line Sales</item>
+        <item>Outward Others</item>
+        <item>Inward Supply</item>
+        <item>Inward Import</item>
+        <item>Inward SKD/CKD</item>
+        <item>Inward Job Work Returns</item>
+        <item>Inward Sales Returns</item>
+        <item>Inward Exhibitions &amp; Fairs</item>
+        <item>Inward Others</item>
+    </string-array>
+
+    <string-array name="transportationCode">
+        <item>OSUP</item>
+        <item>OEXP</item>
+        <item>OJOB</item>
+        <item>OSCD</item>
+        <item>ORNK</item>
+        <item>OFOU</item>
+        <item>OEOF</item>
+        <item>OLNS</item>
+        <item>OOTH</item>
+        <item>ISUP</item>
+        <item>IIMP</item>
+        <item>ISCD</item>
+        <item>IJWR</item>
+        <item>ISLR</item>
+        <item>IEOF</item>
+        <item>IOTH</item>
+    </string-array>
+
+</resources>

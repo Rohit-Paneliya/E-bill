@@ -3,12 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context="ebill.com.CancelBillActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/txtBillNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/e_way_bill_no"
+        android:maxLength="15"
+        android:maxLines="1" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cancel_bill_screen"
-        android:textSize="20sp" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onSubmitClicked"
+        android:text="@string/submit"
+        android:textColor="@android:color/white" />
 </LinearLayout>

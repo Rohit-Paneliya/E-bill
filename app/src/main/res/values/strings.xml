@@ -1,29 +1,36 @@
 <resources>
-    <string name="app_name">Ebill</string>
+    <string name="app_name">E Way Bill GST</string>
+    <string name="ebill_mob_no">7738299899</string>
+    <string name="ebill_document_link">https://goo.gl/xHUN24</string>
+
     <string name="select_language">Select Language</string>
     <string name="gujarati">Gujarati</string>
+    <string name="hindi">Hindi</string>
     <string name="english">English</string>
+
     <string name="cancel_bill_screen">Cancel Bill Screen</string>
-    <string name="gst_ne_bill">GST E-bill</string>
-    <string name="generate_e_bill">Generate E-bill</string>
-    <string name="cancel_e_bill">Cancel E-bill</string>
+    <string name="gst_ne_bill">E Way Bill GST</string>
+    <string name="generate_e_bill">Generate E Way Bill</string>
+    <string name="cancel_e_bill">Cancel E Way Bill</string>
     <string name="transportation_type">Transportation type</string>
-    <string name="recipient_s_gstin">Recipient’s GSTIN</string>
-    <string name="pincode">Pincode</string>
-    <string name="bill_no">Bill No</string>
+    <string name="recipient_s_gstin">Buyer GST Number</string>
+    <string name="pincode">PIN Code of the Place of Delivery</string>
+    <string name="bill_no">Bill Number</string>
     <string name="bill_date">Bill Date</string>
     <string name="select_date">Select date</string>
-    <string name="bill_value">Bill Value</string>
-    <string name="hsn_code">HSN code</string>
-    <string name="approx_distance_in_km">Approx distance (in km)</string>
-    <string name="vehical_no">Vehical no</string>
+    <string name="bill_value">Bill Amount</string>
+    <string name="hsn_code">HSN Code</string>
+    <string name="approx_distance_in_km">Approximate Distance in KMs</string>
+    <string name="vehical_no">Transport Vehicle Number</string>
     <string name="submit">Submit</string>
-    <string name="bill_suggestion">Your mobile number must be register on E way bill portal to generate E way bill using SMS.\n\nIf your mobile number is not register, please inform your GST consultant to register your mobile number (you may register mobile number which has free outgoing SMS)  on E way bill portal. You may share below document to GST consultant for registration.</string>
+    <string name="bill_suggestion">You must have below details to generate E Way bill using SMS facility:\n\n1) Bill Copy\n2) Transport vehicle number\n3) Registration of your mobile number in E Way Bill Portal (One time activity) \n\n\n If your mobile number is not register, please inform your GST consultant to register your mobile number (you may register mobile number which has free outgoing SMS) on E way bill portal. You may share below document to GST consultant for registration.</string>
     <string name="ok">OK</string>
+    <string name="share">Share</string>
+    <string name="e_way_bill_no">E Way Bill Number</string>
 
 
     <string-array name="transportation">
-        <item>Outward Supply</item>
+        <item>Outward Supply (Sell)</item>
         <item>Outward Export</item>
         <item>Outward Job Work</item>
         <item>Outward SKD/CKD</item>

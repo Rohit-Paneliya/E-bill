@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class GenerateBillActivity extends AppCompatActivity {
@@ -41,6 +42,8 @@ public class GenerateBillActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+
         transCode = getResources().getStringArray(R.array.transportationCode);
 
         spinnerTransType = findViewById(R.id.spinnerTransType);
@@ -53,14 +56,14 @@ public class GenerateBillActivity extends AppCompatActivity {
         txtDistance = findViewById(R.id.txtDistance);
         txtVehicalNo = findViewById(R.id.txtVehicalNo);
 
+        txtBillDate.setText(dateFormat.format(new Date()));
+
         txtBillDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(GenerateBillActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
-                        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
                         billDate.set(year, month, dayOfMonth);
                         txtBillDate.setText(dateFormat.format(billDate.getTime()));
                     }
@@ -157,7 +160,7 @@ public class GenerateBillActivity extends AppCompatActivity {
 
         //Log.d("-------", "sendSms: " + setMsgFormat());
         SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage(destinationAddress, null, setMsgFormat(), null, null);
+        smsManager.sendTextMessage(getString(R.string.ebill_mob_no), null, setMsgFormat(), null, null);
         Toast.makeText(getApplicationContext(), "SMS sent successfully.", Toast.LENGTH_LONG).show();
     }
 

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:gravity="center"
-        android:text="GST\nE-bill"
+        android:text="@string/gst_ne_bill"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="50sp" />
 
@@ -36,14 +36,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/gujarati"
-            android:textSize="21sp" />
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/radioHin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hindi"
+            android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/radioEng"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/english"
-            android:textSize="21sp" />
+            android:textSize="25sp" />
     </RadioGroup>
 </LinearLayout>
