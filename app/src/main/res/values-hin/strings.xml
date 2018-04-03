@@ -8,7 +8,7 @@
     <string name="generate_e_bill">ई वे बिल जेनरेट करें</string>
     <string name="cancel_e_bill">ई वे बिल रद्द करें</string>
 
-    <string name="transportation_type">વसौदे का प्रकार</string>
+    <string name="transportation_type">सौदे का प्रकार</string>
     <string name="recipient_s_gstin">खरीदार GST संख्या</string>
     <string name="pincode">डिलिवरी के स्थान का पिन कोड</string>
     <string name="bill_no">बील संख्या</string>

@@ -1,7 +1,9 @@
 package ebill.com;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -75,7 +77,10 @@ public class GenerateBillActivity extends AppCompatActivity {
     }
 
     public void onSubmitClicked(View view) {
+        finalSubmitEWayBill();
+    }
 
+    private void finalSubmitEWayBill() {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_CONTACTS)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -104,7 +109,6 @@ public class GenerateBillActivity extends AppCompatActivity {
         } else {
             sendSms();
         }
-
     }
 
     private void sendSms() {
@@ -158,10 +162,32 @@ public class GenerateBillActivity extends AppCompatActivity {
             return;
         }
 
-        //Log.d("-------", "sendSms: " + setMsgFormat());
-        SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage(getString(R.string.ebill_mob_no), null, setMsgFormat(), null, null);
-        Toast.makeText(getApplicationContext(), "SMS sent successfully.", Toast.LENGTH_LONG).show();
+
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+        builder1.setMessage(setMsgFormat());
+        builder1.setCancelable(true);
+
+        builder1.setPositiveButton(
+                getString(R.string.generate_e_bill),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //Log.d("-------", "sendSms: " + setMsgFormat());
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage(getString(R.string.ebill_mob_no), null, setMsgFormat(), null, null);
+                        Toast.makeText(getApplicationContext(), "SMS sent successfully.", Toast.LENGTH_LONG).show();
+                    }
+                });
+
+        builder1.setNegativeButton(
+                getString(R.string.cancel_e_bill),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
     }
 
     @NonNull

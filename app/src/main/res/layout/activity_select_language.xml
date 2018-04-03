@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
+        android:layout_marginTop="8dp"
         android:text="@string/select_language"
         android:textSize="30sp" />
 
@@ -29,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="16dp">
 
         <RadioButton
             android:id="@+id/radioGuj"
@@ -42,6 +43,7 @@
             android:id="@+id/radioHin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="@string/hindi"
             android:textSize="25sp" />
 
@@ -49,7 +51,7 @@
             android:id="@+id/radioEng"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:text="@string/english"
             android:textSize="25sp" />
     </RadioGroup>
