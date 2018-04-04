@@ -4,15 +4,15 @@
     <string name="ebill_document_link">https://goo.gl/xHUN24</string>
 
     <string name="select_language">Select Language</string>
-    <string name="gujarati">Gujarati</string>
-    <string name="hindi">Hindi</string>
+    <string name="gujarati">ગુજરાતી</string>
+    <string name="hindi">हिन्दी</string>
     <string name="english">English</string>
 
     <string name="cancel_bill_screen">Cancel Bill Screen</string>
     <string name="gst_ne_bill">E Way Bill GST</string>
     <string name="generate_e_bill">Generate E Way Bill</string>
     <string name="cancel_e_bill">Cancel E Way Bill</string>
-    <string name="transportation_type">Transportation type</string>
+    <string name="transportation_type">Transaction type</string>
     <string name="recipient_s_gstin">Buyer GST Number</string>
     <string name="pincode">PIN Code of the Place of Delivery</string>
     <string name="bill_no">Bill Number</string>
@@ -23,7 +23,9 @@
     <string name="approx_distance_in_km">Approximate Distance in KMs</string>
     <string name="vehical_no">Transport Vehicle Number</string>
     <string name="submit">Submit</string>
-    <string name="bill_suggestion">You must have below details to generate E Way bill using SMS facility:\n\n1) Bill Copy\n2) Transport vehicle number\n3) Registration of your mobile number in E Way Bill Portal (One time activity) \n\n\n If your mobile number is not register, please inform your GST consultant to register your mobile number (you may register mobile number which has free outgoing SMS) on E way bill portal. You may share below document to GST consultant for registration.</string>
+    <string name="bill_suggestion">You must have below details to generate E Way bill using SMS facility:</string>
+    <string name="bill_suggestion1">\n1) Bill Copy\n2) Transport vehicle number\n3) Registration of your mobile number in E Way Bill Portal (One time activity)</string>
+    <string name="bill_suggestion2">\nIf your mobile number is not register, please inform your GST consultant to register your mobile number (you may register mobile number which has free outgoing SMS) on E way bill portal. You may share below document to GST consultant for registration.</string>
     <string name="ok">OK</string>
     <string name="share">Share</string>
     <string name="e_way_bill_no">E Way Bill Number</string>
