@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/e_way_bill_no"
-        android:maxLength="15"
+        android:inputType="number"
+        android:maxLength="12"
         android:maxLines="1" />
 
     <Button
@@ -20,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="18dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/blue_rounded_corner_button"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="onSubmitClicked"
         android:text="@string/submit"

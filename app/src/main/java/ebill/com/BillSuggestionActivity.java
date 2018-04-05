@@ -1,6 +1,7 @@
 package ebill.com;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -28,5 +29,11 @@ public class BillSuggestionActivity extends AppCompatActivity {
 
     public void onCancelBillClicked(View view) {
         startActivity(new Intent(BillSuggestionActivity.this, CancelBillActivity.class));
+    }
+
+    public void onDownloadButtonClicked(View view) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(getString(R.string.bill_download_link)));
+        startActivity(i);
     }
 }

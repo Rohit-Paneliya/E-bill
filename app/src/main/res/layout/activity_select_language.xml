@@ -33,12 +33,11 @@
         android:layout_marginTop="16dp">
 
         <RadioButton
-            android:id="@+id/radioGuj"
+            android:id="@+id/radioEng"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/gujarati"
+            android:text="@string/english"
             android:textSize="25sp" />
-
         <RadioButton
             android:id="@+id/radioHin"
             android:layout_width="match_parent"
@@ -46,13 +45,12 @@
             android:layout_marginTop="4dp"
             android:text="@string/hindi"
             android:textSize="25sp" />
-
         <RadioButton
-            android:id="@+id/radioEng"
+            android:id="@+id/radioGuj"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="@string/english"
+            android:text="@string/gujarati"
             android:textSize="25sp" />
     </RadioGroup>
 </LinearLayout>

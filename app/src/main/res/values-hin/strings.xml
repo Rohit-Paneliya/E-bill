@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Ebill</string>
     <string name="select_language">Select Language</string>
     <string name="gujarati">Gujarati</string>
     <string name="english">English</string>
@@ -27,6 +26,7 @@
     <string name="hindi">Hindi</string>
     <string name="share">Share</string>
     <string name="e_way_bill_no">ई वे बिल संख्या</string>
+    <string name="download_e_way_bill">ई वे बिल डाउनलोड करें</string>
 
     <string-array name="transportation">
         <item>Outward Supply (बेचना)</item>

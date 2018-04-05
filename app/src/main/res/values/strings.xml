@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">E Way Bill GST</string>
+    <string name="app_name">E Way Bill GST: Generate using SMS</string>
     <string name="ebill_mob_no">7738299899</string>
     <string name="ebill_document_link">https://goo.gl/xHUN24</string>
 
@@ -29,6 +29,8 @@
     <string name="ok">OK</string>
     <string name="share">Share</string>
     <string name="e_way_bill_no">E Way Bill Number</string>
+    <string name="download_e_way_bill">Download E Way Bill</string>
+    <string name="bill_download_link">https://ewaybillgst.gov.in/Others/EBPrintnew.aspx</string>
 
 
     <string-array name="transportation">
