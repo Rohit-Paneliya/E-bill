@@ -23,7 +23,7 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/blue_rounded_corner_button"
         android:foreground="?attr/selectableItemBackground"
-        android:onClick="onSubmitClicked"
+        android:onClick="onCancelBillClicked"
         android:text="@string/submit"
         android:textColor="@android:color/white" />
 </LinearLayout>

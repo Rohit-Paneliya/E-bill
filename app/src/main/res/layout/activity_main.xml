@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:hint="@string/recipient_s_gstin"
+            android:inputType="textCapCharacters"
             android:maxLength="15"
             android:maxLines="1" />
 
@@ -54,6 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/bill_no"
+            android:inputType="textCapCharacters"
             android:maxLength="15"
             android:maxLines="1" />
 
@@ -114,6 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/vehical_no"
+            android:inputType="textCapCharacters"
             android:maxLines="1" />
 
         <Button

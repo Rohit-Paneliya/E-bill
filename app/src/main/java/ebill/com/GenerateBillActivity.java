@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -26,11 +27,10 @@ import java.util.Locale;
 public class GenerateBillActivity extends AppCompatActivity {
 
     private final int MY_PERMISSIONS_REQUEST_SEND_SMS = 101;
-    String destinationAddress = "9731979899";
     Calendar billDate = Calendar.getInstance();
     String[] transCode;
     private Spinner spinnerTransType;
-    private EditText txtRecGstIn;
+    private EditText txtBuyerGstNumber;
     private EditText txtPincode;
     private EditText txtBillNo;
     private TextView txtBillDate;
@@ -49,7 +49,7 @@ public class GenerateBillActivity extends AppCompatActivity {
         transCode = getResources().getStringArray(R.array.transportationCode);
 
         spinnerTransType = findViewById(R.id.spinnerTransType);
-        txtRecGstIn = findViewById(R.id.txtRecGstIn);
+        txtBuyerGstNumber = findViewById(R.id.txtRecGstIn);
         txtPincode = findViewById(R.id.txtPincode);
         txtBillNo = findViewById(R.id.txtBillNo);
         txtBillDate = findViewById(R.id.txtBillDate);
@@ -59,6 +59,9 @@ public class GenerateBillActivity extends AppCompatActivity {
         txtVehicalNo = findViewById(R.id.txtVehicalNo);
 
         txtBillDate.setText(dateFormat.format(new Date()));
+        txtBuyerGstNumber.setAllCaps(true);
+        txtBillNo.setAllCaps(true);
+        txtVehicalNo.setAllCaps(true);
 
         txtBillDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,10 +116,12 @@ public class GenerateBillActivity extends AppCompatActivity {
 
     private void sendSms() {
 
-        // Recipient's GSTIN
-        if (txtRecGstIn.getText().toString().trim().length() < 3) {
-            Toast.makeText(this, "Please enter RecGSTIN with 3 or 15 digit.", Toast.LENGTH_SHORT).show();
-            return;
+        // Buyer GST number
+        if (txtBuyerGstNumber.getText().toString().trim().length() < 15) {
+            if (!txtBuyerGstNumber.getText().toString().trim().equals("URP")) {
+                Toast.makeText(this, "Please enter Buyer GST number with 3 or 15 digit.", Toast.LENGTH_SHORT).show();
+                return;
+            }
         }
 
         // Bill pincode
@@ -157,24 +162,24 @@ public class GenerateBillActivity extends AppCompatActivity {
         }
 
         //Vehicle number
-        if (txtVehicalNo.getText().toString().trim().equals("")) {
-            Toast.makeText(this, "Please enter vehicle number.", Toast.LENGTH_SHORT).show();
+        if (!vehicalNumberValidation()) {
+            Toast.makeText(this, "Please enter proper vehicle number.", Toast.LENGTH_SHORT).show();
             return;
         }
 
 
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-        builder1.setMessage(setMsgFormat());
+        builder1.setMessage(submitPreviewData());
         builder1.setCancelable(true);
 
         builder1.setPositiveButton(
                 getString(R.string.generate_e_bill),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        //Log.d("-------", "sendSms: " + setMsgFormat());
                         SmsManager smsManager = SmsManager.getDefault();
                         smsManager.sendTextMessage(getString(R.string.ebill_mob_no), null, setMsgFormat(), null, null);
                         Toast.makeText(getApplicationContext(), "SMS sent successfully.", Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(GenerateBillActivity.this, SubmitSuccessActivity.class));
                     }
                 });
 
@@ -190,13 +195,39 @@ public class GenerateBillActivity extends AppCompatActivity {
         alert11.show();
     }
 
+    private boolean vehicalNumberValidation() {
+        // AB12AB1234
+        if (txtVehicalNo.getText().toString().matches("^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}$")) {
+            return true;
+        } // AB12A1234
+        else if (txtVehicalNo.getText().toString().matches("^[A-Z]{2}[0-9]{2}[A-Z]{1}[0-9]{4}$")) {
+            return true;
+        }// AB121234
+        else if (txtVehicalNo.getText().toString().matches("^[A-Z]{2}[0-9]{6}$")) {
+            return true;
+        }// ABC1234
+        else return txtVehicalNo.getText().toString().matches("^[A-Z]{3}[0-9]{4}$");
+    }
+
+    private String submitPreviewData() {
+        return getString(R.string.transportation_type) + " : " + spinnerTransType.getSelectedItem() + "\n" +
+                getString(R.string.recipient_s_gstin) + " : " + txtBuyerGstNumber.getText().toString() + "\n" +
+                getString(R.string.pincode) + " : " + txtPincode.getText().toString() + "\n" +
+                getString(R.string.bill_no) + " : " + txtBillNo.getText().toString() + "\n" +
+                getString(R.string.bill_date) + " : " + txtBillDate.getText().toString() + "\n" +
+                getString(R.string.bill_value) + " : " + txtBillValue.getText().toString() + "\n" +
+                getString(R.string.hsn_code) + " : " + txtHsnCode.getText().toString() + "\n" +
+                getString(R.string.approx_distance_in_km) + " : " + txtDistance.getText().toString() + "\n" +
+                getString(R.string.vehical_no) + " : " + txtVehicalNo.getText().toString() + "\n";
+    }
+
     @NonNull
     private String setMsgFormat() {
         String billValue = txtBillValue.getText().toString();
 
-        return "EWBG " + transCode[spinnerTransType.getSelectedItemPosition()] + " " + txtRecGstIn.getText().toString() + " " + txtPincode.getText().toString() + " " +
-                txtBillNo.getText().toString() + " " + txtBillDate.getText().toString() + " " + billValue + " " +
-                txtHsnCode.getText().toString() + " " + txtDistance.getText().toString() + " " + txtVehicalNo.getText().toString();
+        return "EWBG " + transCode[spinnerTransType.getSelectedItemPosition()].toUpperCase() + " " + txtBuyerGstNumber.getText().toString().toUpperCase() + " " + txtPincode.getText().toString() + " " +
+                txtBillNo.getText().toString().toUpperCase() + " " + txtBillDate.getText().toString() + " " + billValue + " " +
+                txtHsnCode.getText().toString() + " " + txtDistance.getText().toString() + " " + txtVehicalNo.getText().toString().toUpperCase();
     }
 
     @Override

@@ -27,6 +27,11 @@
     <string name="share">Share</string>
     <string name="e_way_bill_no">ઇ વે બિલ નંબર</string>
     <string name="download_e_way_bill">ઇ વે બિલ ડાઉનલોડ કરો</string>
+    <string name="cancel_bill_popup">શું તમે ખરેખર બિલ રદ કરવા માંગો છો?</string>
+    <string name="yes">હા</string>
+    <string name="no">ના</string>
+    <string name="submitted_successfully">Submitted successfully.</string>
+    <string name="app_created_by">Conceptualized by :\n\nCA Pradip Patel\nDISA, ERP Certified\n82003 82474\neservices247@gmail.com</string>
 
     <string-array name="transportation">
         <item>Outward Supply (વેચાણ)</item>
