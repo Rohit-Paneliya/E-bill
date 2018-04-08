@@ -118,7 +118,7 @@ public class GenerateBillActivity extends AppCompatActivity {
 
         // Buyer GST number
         if (txtBuyerGstNumber.getText().toString().trim().length() < 15) {
-            if (!txtBuyerGstNumber.getText().toString().trim().equals("URP")) {
+            if (!txtBuyerGstNumber.getText().toString().trim().equalsIgnoreCase("URP")) {
                 Toast.makeText(this, "Please enter Buyer GST number with 3 or 15 digit.", Toast.LENGTH_SHORT).show();
                 return;
             }
