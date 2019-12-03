@@ -1,15 +1,7 @@
 package ebill.com;
 
-import android.Manifest;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,10 +20,11 @@ public class CancelBillActivity extends AppCompatActivity {
     }
 
     public void onCancelBillClicked(View view) {
-        finalCancelEWayBill();
+        //finalCancelEWayBill();
+        Toast.makeText(this, "Under development", Toast.LENGTH_SHORT).show();
     }
 
-    private void finalCancelEWayBill() {
+    /*private void finalCancelEWayBill() {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_CONTACTS)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -114,5 +107,5 @@ public class CancelBillActivity extends AppCompatActivity {
             }
         }
 
-    }
+    }*/
 }

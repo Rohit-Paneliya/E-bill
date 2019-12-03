@@ -1,17 +1,10 @@
 package ebill.com;
 
-import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -80,10 +73,11 @@ public class GenerateBillActivity extends AppCompatActivity {
     }
 
     public void onSubmitClicked(View view) {
-        finalSubmitEWayBill();
+        //finalSubmitEWayBill();
+        Toast.makeText(this, "Under development", Toast.LENGTH_SHORT).show();
     }
 
-    private void finalSubmitEWayBill() {
+    /*private void finalSubmitEWayBill() {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_CONTACTS)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -112,7 +106,7 @@ public class GenerateBillActivity extends AppCompatActivity {
         } else {
             sendSms();
         }
-    }
+    }*/
 
     private void sendSms() {
 
@@ -176,10 +170,10 @@ public class GenerateBillActivity extends AppCompatActivity {
                 getString(R.string.generate_e_bill),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        SmsManager smsManager = SmsManager.getDefault();
+                        /*SmsManager smsManager = SmsManager.getDefault();
                         smsManager.sendTextMessage(getString(R.string.ebill_mob_no), null, setMsgFormat(), null, null);
                         Toast.makeText(getApplicationContext(), "SMS sent successfully.", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(GenerateBillActivity.this, SubmitSuccessActivity.class));
+                        startActivity(new Intent(GenerateBillActivity.this, SubmitSuccessActivity.class));*/
                     }
                 });
 
@@ -221,16 +215,16 @@ public class GenerateBillActivity extends AppCompatActivity {
                 getString(R.string.vehical_no) + " : " + txtVehicalNo.getText().toString() + "\n";
     }
 
-    @NonNull
+    /*@NonNull
     private String setMsgFormat() {
         String billValue = txtBillValue.getText().toString();
 
         return "EWBG " + transCode[spinnerTransType.getSelectedItemPosition()].toUpperCase() + " " + txtBuyerGstNumber.getText().toString().toUpperCase() + " " + txtPincode.getText().toString() + " " +
                 txtBillNo.getText().toString().toUpperCase() + " " + txtBillDate.getText().toString() + " " + billValue + " " +
                 txtHsnCode.getText().toString() + " " + txtDistance.getText().toString() + " " + txtVehicalNo.getText().toString().toUpperCase();
-    }
+    }*/
 
-    @Override
+    /*@Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_SEND_SMS: {
@@ -243,5 +237,5 @@ public class GenerateBillActivity extends AppCompatActivity {
             }
         }
 
-    }
+    }*/
 }
